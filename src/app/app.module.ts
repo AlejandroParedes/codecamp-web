@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { TwitterComponent } from './twitter/twitter.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { TwitterGraphComponent } from './twitter/twitter-graph/twitter-graph.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TwitterComponent
+    TwitterComponent,
+    TwitterGraphComponent
   ],
   imports: [
     BrowserModule,
