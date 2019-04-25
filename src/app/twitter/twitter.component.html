@@ -33,11 +33,15 @@
           <form>
             <div class="row">
               <div class="col">
-                <input type="text" class="form-control" placeholder="Usuario 1">
+                <input type="text" class="form-control" placeholder="Usuario 1" [(ngModel)]="userA">
+                {{userA}}
               </div>
               <div class="col">
-                <input type="text" class="form-control" placeholder="Usuario 2">
+                <input type="text" class="form-control" placeholder="Usuario 2" [(ngModel)]="userB">
               </div>
+            </div>
+            <div class="row">
+              <button type="button" class="btn btn-info btn-block" (click)="getData()">Consultar twitter</button>
             </div>
           </form>
         </div>
