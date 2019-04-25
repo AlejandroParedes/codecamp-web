@@ -9,19 +9,21 @@ import { FollowerService } from '@services/follower.service';
 export class TwitterComponent implements OnInit {
   public userA: string;
   public userB: string;
+  public followersA: string[];
+  public followersB: string[];
 
   constructor(
     private followerService: FollowerService
   ) { }
 
   async ngOnInit() {
-    let follower = await this.followerService.getFollowers('ho');
-    console.log(follower);
   }
 
   async getData() {
-    console.log(this.userA);
-    console.log(this.userB);
+    this.followersA = await this.followerService.getFollowers(this.userA);
+    this.followersB = await this.followerService.getFollowers(this.userB);
+    console.log(this.followersA);
+    console.log(this.followersB);
   }
 
 }
