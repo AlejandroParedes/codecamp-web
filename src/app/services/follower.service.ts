@@ -19,7 +19,7 @@ export class FollowerService {
       "userNameA": "alemanuchau",
       "userNameB": ""
     };
-    let result: any = await this.http.post(`${ENDPOINT}/codecamp/getUserFollowers`, queryObj).toPromise();
+    let result: any = await this.http.post(`${ENDPOINT}/getUserFollowers`, queryObj).toPromise();
     return result;
   }
 }
